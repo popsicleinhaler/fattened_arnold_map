@@ -1,0 +1,18 @@
+# heritable cell cycle oscillations
+
+y'=T0*(1-a)+a*y+k*sin((2*pi*(y+x)))/Tosc
+x'=y+x
+
+par a=0
+par k=0.5
+par Tosc = 24
+pat T0 = 1
+
+init y=1, x=1
+
+# set method to discrete
+@ meth=discrete
+@ total=100
+@ ylo=-.1,yhi=1,xhi=100
+
+done
